@@ -7890,6 +7890,8 @@ static bool lcd_selfcheck_axis_sg(unsigned char axis) {
 	switch (axis) {
 	case 0: axis_length = X_MAX_POS; break;
 	case 1: axis_length = Y_MAX_POS + 8; break;
+	// from https://forum.prusaprinters.org/forum/original-prusa-i3-mmu2s-mmu2-hardware-firmware-and-software-help/lengthened-ptfe-from-360-to-510mm-how-to-change-mmu-code/paged/2/
+	case 2: axis_length = Z_MAX_POS; break;
 	default: axis_length = 210; break;
 	}
 
